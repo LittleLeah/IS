@@ -1,0 +1,62 @@
+﻿@model _1._4.Models.IndexViewModel
+
+@{
+    ViewBag.Title = "Registrer udlån og aflevering";
+}
+
+<div>
+    <div class="col-md-6">
+        @using(Html.BeginForm("IndexCheckOut", "Home", FormMethod.Post))
+        {
+        <table>
+            <thead> Registrer udlån af bog</thead>
+            <tr>
+                <td>
+                    Bog:
+                </td>
+                <td>
+                    @Html.DropDownListFor(Model => Model.ChosenBook.ID, Model.BooksInLibrary.Select(x => new SelectListItem { Text = x.Title, Value = x.ID.ToString() }), new { @class = "form-control chosen-select" })
+                </td>
+            </tr>
+            <tr style="height:10px"></tr>
+            <tr>
+                <td>
+                    Bruger:
+                </td>
+                <td>
+                    @Html.DropDownListFor(Model => Model.ChosenUser.UserNo, Model.Users.Select(x => new SelectListItem { Text = x.Name, Value = x.UserNo.ToString() }), new { @class = "form-control chosen-select" })
+                </td>
+            </tr>
+            <tr style="height:10px"></tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Registrer udlån" /></td>
+            </tr>
+        </table>
+        }
+    </div>
+    <div class="col-md-6">
+        @using (Html.BeginForm("IndexCheckIn", "Home", FormMethod.Post))
+        {
+            <table>
+                <thead> Registrer aflevering af bog</thead>
+                <tr>
+                    <td>
+                        Bog:
+                    </td>
+                    <td>
+                        @Html.DropDownListFor(Model => Model.ChosenBook.ID, Model.BooksOnLoan.Select(x => new SelectListItem { Text = x.Title, Value = x.ID.ToString() }), new { @class = "form-control chosen-select" })
+                    </td>
+                </tr>
+                
+                
+                <tr style="height:10px"></tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Registrer aflevering" /></td>
+                </tr>
+            </table>
+        }
+    </div>
+</div>
+

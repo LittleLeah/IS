@@ -1,0 +1,7 @@
+C:\Users\nguld\source\repos\Server12\Server12\obj\Debug\Server12.csprojAssemblyReference.cache
+C:\Users\nguld\source\repos\Server12\Server12\obj\Debug\Server12.csproj.CoreCompileInputs.cache
+C:\Users\nguld\source\repos\Server12\Server12\bin\Debug\Server12.exe.config
+C:\Users\nguld\source\repos\Server12\Server12\bin\Debug\Server12.exe
+C:\Users\nguld\source\repos\Server12\Server12\bin\Debug\Server12.pdb
+C:\Users\nguld\source\repos\Server12\Server12\obj\Debug\Server12.exe
+C:\Users\nguld\source\repos\Server12\Server12\obj\Debug\Server12.pdb

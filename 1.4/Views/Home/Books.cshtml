@@ -1,0 +1,83 @@
+﻿@model _1._4.Models.ViewModel
+
+@{
+    ViewBag.Title = "Books";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<body>
+    @using (Html.BeginForm("Books", "Home", FormMethod.Post))
+    {
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th colspan="2" align="center">Registrer en ny bog</th>
+        </tr>
+        <tr>
+            <td>Titel: </td>
+            <td>
+                @Html.TextBoxFor(Model => Model.newBook.Title)
+            </td>
+        </tr>
+        <tr style="height:10px"></tr>
+        <tr>
+            <td>Forfatter: </td>
+            <td>
+                @Html.TextBoxFor(Model => Model.newBook.Author)
+            </td>
+        </tr>
+        <tr style="height:10px"></tr>
+        <tr>
+            <td>ISBN: </td>
+            <td>
+                @Html.TextBoxFor(Model => Model.newBook.ISBN)
+            </td>
+        </tr>
+        <tr style="height:10px"></tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Registrer" /></td>
+        </tr>
+    </table>
+    }
+        <div>
+            Bøger i bibliotek
+        </div>
+        @if (Model.inLibrary != null)
+        {
+            <div class="col-md-8">
+                <div>
+                    Tilgængelige i bibliotek
+                </div>
+                @foreach (var item in Model.inLibrary)
+                {
+                    <div class="col-md-5">
+                        @item.Title
+                    </div>
+                    <div class="col-md-3">
+                        @item.Author
+                    </div>
+                }
+            </div>
+        }
+        @if (Model.onLoan != null)
+        {
+            <div class="col-md-8">
+                <div>
+                    På udlån
+                </div>
+                @foreach (var item in Model.onLoan)
+                {
+                    <div class="col-md-5">
+                        @item.Title
+                    </div>
+                    <div class="col-md-3">
+                        @item.Author
+                    </div>
+                    
+                }
+            </div>
+        }
+
+    
+</body>

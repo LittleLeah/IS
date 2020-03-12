@@ -1,0 +1,7 @@
+C:\Users\nguld\source\repos\Client12\Client12\bin\Debug\Client12.exe.config
+C:\Users\nguld\source\repos\Client12\Client12\bin\Debug\Client12.exe
+C:\Users\nguld\source\repos\Client12\Client12\bin\Debug\Client12.pdb
+C:\Users\nguld\source\repos\Client12\Client12\obj\Debug\Client12.csprojAssemblyReference.cache
+C:\Users\nguld\source\repos\Client12\Client12\obj\Debug\Client12.csproj.CoreCompileInputs.cache
+C:\Users\nguld\source\repos\Client12\Client12\obj\Debug\Client12.exe
+C:\Users\nguld\source\repos\Client12\Client12\obj\Debug\Client12.pdb
